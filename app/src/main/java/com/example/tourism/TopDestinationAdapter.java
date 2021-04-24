@@ -31,6 +31,12 @@ public class TopDestinationAdapter extends RecyclerView.Adapter<TopDestinationAd
     @Override
     public void onBindViewHolder(@NonNull TopDestinationViewHolder holder, int position) {
         holder.imageView.setImageResource(topDestinationList.get(position).getImageId());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override

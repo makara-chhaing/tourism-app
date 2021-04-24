@@ -35,15 +35,18 @@ public class MainActivity extends AppCompatActivity {
             topDestination = new TopDestination(imageIdArray[i]);
             topDestinationList.add(topDestination);
         }
-
+        // Add adapter for vertical recyclerview (Top Destination)
         PlaceToGoAdapter placeToGoAdapter = new PlaceToGoAdapter(MainActivity.this, placesToGoList);
         verti_recyclerView.setAdapter(placeToGoAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this, RecyclerView.VERTICAL, false);
         verti_recyclerView.setLayoutManager(layoutManager);
 
+        // Set Adapter and LayoutManager for horizontal recyclerView (Places to go)
         TopDestinationAdapter adapter = new TopDestinationAdapter(MainActivity.this, topDestinationList);
         hori_recyclerView.setAdapter(adapter);
         RecyclerView.LayoutManager hor_layoutManager = new LinearLayoutManager(MainActivity.this, RecyclerView.HORIZONTAL, false);
         hori_recyclerView.setLayoutManager(hor_layoutManager);
+
+
     }
 }
