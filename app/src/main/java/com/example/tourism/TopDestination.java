@@ -1,14 +1,13 @@
 package com.example.tourism;
 
 public class TopDestination {
-    private Integer id;
-    private String name;
+    private Integer imageId;
 
-    public TopDestination(int id, String name){
-        this.id = id;
-        this.name = name;
+    public TopDestination(int imageID){
+        this.imageId = imageID;
     }
 
-
-
+    public Integer getImageId() {
+        return imageId;
+    }
 }
