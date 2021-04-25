@@ -1,12 +1,15 @@
 package com.example.tourism;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -15,6 +18,8 @@ public class TopDestinationAdapter extends RecyclerView.Adapter<TopDestinationAd
 
     Context context;
     List<TopDestination> topDestinationList;
+    Fragment fragment;
+    Bundle bundle;
 
     public TopDestinationAdapter(Context context, List<TopDestination> topDestinations){
         this.context = context;
@@ -34,9 +39,28 @@ public class TopDestinationAdapter extends RecyclerView.Adapter<TopDestinationAd
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//                fragmentJump(topDestinationList.get(position));
             }
         });
+    }
+
+    private void fragmentJump(TopDestination itemSelected) {
+        fragment = new DetailFragment();
+//        bundle = new Bundle();
+//        bundle.putParcelable("item_selected_key", (Parcelable) itemSelected);
+//        fragment.setArguments(bundle);
+        switchContent(R.layout.fragment_detail, fragment);
+    }
+
+    public void switchContent(int id, Fragment fragment) {
+        if (context == null)
+            return;
+        if (context instanceof MainActivity) {
+            MainActivity mainActivity = (MainActivity) context;
+            this.fragment = fragment;
+            mainActivity.switchContent(id, fragment);
+        }
+
     }
 
     @Override
