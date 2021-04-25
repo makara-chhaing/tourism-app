@@ -40,6 +40,7 @@ public class TopDestinationAdapter extends RecyclerView.Adapter<TopDestinationAd
             @Override
             public void onClick(View v) {
 //                fragmentJump(topDestinationList.get(position));
+                //hi
             }
         });
     }
