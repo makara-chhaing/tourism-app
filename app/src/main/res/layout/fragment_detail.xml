@@ -36,17 +36,16 @@
 
         <TextView
             android:id="@+id/description_frag_id"
-            android:layout_width="287dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="44dp"
+            android:layout_width="298dp"
+            android:layout_height="75dp"
             android:text="TextView"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.604"
+            app:layout_constraintHorizontal_bias="0.663"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name_frag_id"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.071" />
 
         <TextView
             android:id="@+id/location_frag_id"
