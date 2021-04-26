@@ -39,18 +39,17 @@ public class TopDestinationAdapter extends RecyclerView.Adapter<TopDestinationAd
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                fragmentJump(topDestinationList.get(position));
-                //hi
+                fragmentJump(topDestinationList.get(position));
             }
         });
     }
 
     private void fragmentJump(TopDestination itemSelected) {
         fragment = new DetailFragment();
-//        bundle = new Bundle();
-//        bundle.putParcelable("item_selected_key", (Parcelable) itemSelected);
-//        fragment.setArguments(bundle);
-        switchContent(R.layout.fragment_detail, fragment);
+        bundle = new Bundle();
+        bundle.putSerializable("place", itemSelected.getPlace());
+        fragment.setArguments(bundle);
+        switchContent(R.id.main_id, fragment);
     }
 
     public void switchContent(int id, Fragment fragment) {

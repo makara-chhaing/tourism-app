@@ -1,11 +1,14 @@
 package com.example.tourism;
 
-public class PlaceToGo {
+import java.io.Serializable;
+
+public class PlaceToGo implements Serializable {
     private Integer imageId;
-    private String name, description;
-    public PlaceToGo(Integer imageId, String name, String description){
+    private String name, location, description;
+    public PlaceToGo(Integer imageId, String name, String location, String description){
         this.imageId = imageId;
         this.name = name;
+        this.location = location;
         this.description = description;
     }
 
@@ -19,5 +22,9 @@ public class PlaceToGo {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getLocation() {
+        return location;
     }
 }

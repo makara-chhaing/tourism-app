@@ -50,7 +50,7 @@ public class PlaceToGoAdapter extends RecyclerView.Adapter<PlaceToGoAdapter.Plac
             super(itemView);
             imageView = itemView.findViewById(R.id.image_id);
             name = itemView.findViewById(R.id.name_id);
-            description = itemView.findViewById(R.id.description_id);
+            description = itemView.findViewById(R.id.location_id);
         }
     }
 }
